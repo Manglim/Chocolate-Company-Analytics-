@@ -1,52 +1,44 @@
-Repository Name: Chocolate-Sales-Analysis-and-Forecasting
-Description:
-This repository contains a comprehensive suite of Python scripts designed to analyze and derive actionable insights from chocolate sales data (Chocolate Sales.csv). Built for Jupyter Notebook or Kaggle environments, the code leverages libraries like pandas, matplotlib, seaborn, prophet, and statsmodels to perform exploratory data analysis, forecasting, and strategic decision-making. The dataset includes columns such as Sales Person, Country, Product, Date, Amount, and Boxes Shipped, which are used to uncover trends and optimize business operations.
-Key Features:
-Data Visualizations:
-Bar, line, scatter, and heatmap plots to visualize sales by country, product, and time.
+# Chocolate Sales Analysis and Forecasting
 
-Examples: Total sales by country, top products by sales, monthly sales trends.
+## Overview
+This project analyzes chocolate sales data from `Chocolate Sales.csv`, providing visualizations, trends, and a 6-month sales forecast using Prophet. It offers insights for inventory optimization, pricing strategies, and marketing campaigns, executed in a Kaggle environment.
 
-Sales Forecasting:
-Implements Prophet for time series forecasting of future sales (6 months ahead).
+## Functionality
+1. **Preprocessing**:
+   - Cleans `Amount` (removes '$', commas) and converts `Date` to datetime.
+   - Adds `Unit Price` (Amount / Boxes Shipped).
 
-Alternative ARIMA model as a fallback for simpler environments.
+2. **Exploratory Data Analysis**:
+   - Visualizations: Sales by country, top products, monthly trends, sales vs. boxes shipped, sales by salesperson, purchase frequency, AOV, growth rates, seasonal patterns, market share.
+   - Metrics: Correlation, top performers, averages.
 
-Visualizes historical data, forecasts, and seasonality components.
+3. **Forecasting**:
+   - Uses Prophet to predict sales 6 months ahead.
 
-Customer Behavior Analysis:
-Analyzes purchase frequency, average order value (AOV), and product preferences by country.
+4. **Business Insights**:
+   - Inventory: Top products by sales and volume.
+   - Pricing: Unit price distribution.
+   - Marketing: Country sales and seasonal peaks.
 
-Visualizations include heatmaps of product sales by region and correlation plots of sales vs. boxes shipped.
+## Frameworks and Libraries
+- **Python**: Core language.
+- **Pandas**: Data handling (`pd`).
+- **NumPy**: Numerical ops (`np`).
+- **Matplotlib**: Plots (`plt`).
+- **Seaborn**: Visualization (`sns`).
+- **Prophet**: Forecasting (`prophet`).
 
-Market Trend Identification:
-Identifies growth rates by country, product popularity trends, and seasonal patterns.
+## Dataset
+- Source: [Chocolate Sales](https://www.kaggle.com/datasets/<path-to-dataset>).
+- Columns: `Date`, `Country`, `Product`, `Sales Person`, `Amount`, `Boxes Shipped`.
+- Enhanced with `Unit Price` and `Month`.
 
-Features pie charts for market share and dual-axis plots for sales vs. shipment volume.
+## Key Features
+- **Rich EDA**: Bar, line, scatter, heatmap, pie, and box plots.
+- **Forecasting**: 6-month sales prediction with trend/seasonality breakdown.
+- **Actionable Insights**: Supports inventory, pricing, and marketing decisions.
+- **Visual Appeal**: Consistent, professional plotting style.
 
-Business Decision-Making:
-Provides insights for inventory optimization (e.g., top products to stock), pricing strategies (e.g., unit price analysis), and marketing plans (e.g., targeting high-sales regions and peak months).
-
-Includes actionable recommendations based on data-driven metrics.
-
-Usage:
-Environment: Designed for Jupyter Notebook or Kaggle; tested with Python 3.x.
-
-Dependencies: Install via pip install pandas matplotlib seaborn prophet statsmodels.
-
-Dataset: Assumes input file at /kaggle/input/chocolate-sales/Chocolate Sales.csv. Adjust file paths as needed.
-
-Instructions: Run each script in a notebook cell. Start with visualization, then forecasting, and finally decision-making for a complete workflow.
-
-Sample Insights:
-Inventory: Prioritize stocking "Peanut Butter Cubes" in Australia.
-
-Pricing: Test a price increase for "Mint Chip Choco" if unit price is low.
-
-Marketing: Target India in July with promotions for "85% Dark Bars".
-
-Notes:
-Assumes data from 2022; multi-year data enhances trend accuracy.
-
-Customizable: Adjust time granularity (e.g., weekly), filter by region/product, or add external factors (e.g., holidays).
-
+## Installation
+```bash
+pip install prophet matplotlib seaborn
